@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "space mono" monospace;
+  color: black;
+}
+
+.page {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid black;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.letter {
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #cccccc;
+  padding: 10px;
+  text-align: center;
+  font-family: "space mono" monospace;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.correct {
+  background-color: lightgreen;
+  border-color: lightgreen;
+}
+
+.similar {
+  background-color: rgb(235, 188, 101);
+  border-color: rgb(235, 188, 101);
+}
+
+.wrong {
+  background-color: lightgray;
+  border-color: lightgray;
+}
+
+.invalid {
+  animation: invalid-word 2s ease-in-out;
+}
+
+@keyframes invalid-word {
+  0% {
+    border-color: red;
+  }
+  40% {
+    border-color: rgb(255, 72, 72);
+  }
+  100% {
+    border-color: #cccccc;
+  }
+}
+
+.rainbow {
+  animation: rainbow 2.5s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
